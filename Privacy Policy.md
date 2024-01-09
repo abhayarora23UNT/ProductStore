@@ -1,8 +1,9 @@
 Privacy Policy
 
-This application follows some official documentation of Graph QL , Apollo Angular and some sample Github Public Projects.
+This application follows some official documentation of Angular, Jest, Cypress, NgRx and some sample Github Public Projects.
+Also some open source API's are also used to show that data in the grid.
 
-Last updated: 05/26/2023
+Last updated: 01/09/2024
 
 This privacy policy explains how we collect, use, and share information about you when you use our public GitHub projects. Our privacy policy is designed to protect our intellectual property rights and prevent unauthorized copying of our code.
 
