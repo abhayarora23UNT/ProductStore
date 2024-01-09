@@ -2,7 +2,7 @@ export interface Product {
     id: number;
     title: string;
     timestamp: string;
-    _score: string;
+    _score: number;
     api_link: string;
     thumbnail: Thumbnail;
 }

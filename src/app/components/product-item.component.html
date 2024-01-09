@@ -1,0 +1,11 @@
+<section class="listing">
+  <img
+    class="listing-photo"
+    [src]="productItem.thumbnail?.lqip"
+    alt="{{productItem.thumbnail?.alt_text}}" />
+  <h3 class="listing-heading">{{ productItem?.title }}</h3>
+  <div class="listing-location">
+    <span>Score: {{ productItem?._score}}</span>
+    <span>{{ productItem?.timestamp|date}}</span>
+  </div>
+</section>

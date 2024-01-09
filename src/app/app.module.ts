@@ -12,9 +12,10 @@ import { ProductEffects } from './store/effects/product.effects';
 import { HttpClientModule } from '@angular/common/http';
 import { metaReducers, reducers } from './store/reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ProductItemComponent } from './components/product-item.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent,ProductItemComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule,
     StoreModule.forRoot(reducers, { metaReducers }),
     StoreDevtoolsModule.instrument({ maxAge: 50, logOnly: true }),

@@ -1,5 +1,10 @@
 <router-outlet></router-outlet>
 
-<ng-container *ngIf="data$ | async as data">
-  <pre>{{ data | json }}</pre>
+<ng-container *ngIf="productList$">
+  <section class="results">
+    <app-product-item
+      *ngFor="let item of productList$ | async"
+      [productItem]="item">
+    </app-product-item>
+  </section>
 </ng-container>

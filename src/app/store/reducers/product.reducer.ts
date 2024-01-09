@@ -25,18 +25,18 @@ export const productReducer = createReducer(
     )
     ),
 
-    on(addProduct, (state, { payload }) => (
-        {
-            ...state,
-            products: [...state.products, payload]
-        }
-    )
-    ),
+    // on(addProduct, (state, { payload }) => (
+    //     {
+    //         ...state,
+    //         products: [...state.products, payload]
+    //     }
+    // )
+    // ),
 
-    on(removeProduct, (state, { payload }) => ({
-        ...state,
-        products: state.products.filter((p: Product) => payload.id != p.id)
-    })),
+    // on(removeProduct, (state, { payload }) => ({
+    //     ...state,
+    //     products: state.products.filter((p: Product) => payload.id != p.id)
+    // })),
 
     //on(clearProduct, state => initialState),
 

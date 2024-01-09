@@ -11,25 +11,16 @@ import { loadProducts } from './store/actions/product.actions';
 })
 export class AppComponent implements OnInit        {
   title = 'product-list';
-  data$: any
+  productList$: any
   isProductLoaded$:any
   constructor(private store: Store<fromRoot.State>) {
-    console.log("dispatching action");
     this.store.dispatch(loadProducts())
   }
 
   ngOnInit() {
     this.isProductLoaded$=this.store.pipe(select(isProductsLoaded))
 
-    this.isProductLoaded$.subscribe((data: any) => {
-      console.log("data loaded is ", data)
-    })
-
-    this.data$ = this.store.pipe(select(selectProducts));
+    this.productList$ = this.store.pipe(select(selectProducts));
   
-    this.data$.subscribe((data: any) => {
-      console.log("list is ", data)
-    })
-
   }
 }
