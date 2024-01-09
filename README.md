@@ -27,7 +27,8 @@ This application can be used a base to implement NgRx StateManagement in Complex
 
 ![Screenshot 2024-01-09 at 1 33 40 PM](https://github.com/abhayarora23UNT/ProductStore/assets/98612141/7d74ad85-6311-4842-a37f-73abfac37c0d)
 
-#### NgRx States
+#### NgRx States ([NgRx Code](https://github.com/abhayarora23UNT/ProductStore/tree/9e63ab65c643409f3fcefa509ce808d91e1413e3/src/app/store))
+
 
 ![Screenshot 2024-01-09 at 2 55 38 PM](https://github.com/abhayarora23UNT/ProductStore/assets/98612141/8f6a2848-f5ad-4652-8ea4-66458ef0101e)
 
