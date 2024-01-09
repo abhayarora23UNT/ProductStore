@@ -1,7 +1,7 @@
 
 import { mockProductList } from '../../../jestGlobalMocks';
 import { setProduct, setProductError } from '../actions/product.actions';
-import { getProductList, initialState, isProductsLoaded, productReducer } from './product.reducer'
+import { getProductList, getProductsError, initialState, isProductsLoaded, productReducer } from './product.reducer'
 
 describe('Product Reducer', () => {
 
@@ -18,7 +18,10 @@ describe('Product Reducer', () => {
             const action = setProductError({ payload: { error: true } })
             const state = {
                 loaded: false,
-                error: false,
+                error: {
+                    message: 'Internal Server Error',
+                    status: 500
+                },
                 products: []
             }
 
@@ -33,14 +36,14 @@ describe('Product Reducer', () => {
             const action = setProduct({ payload: mockProductList })
             const state = {
                 loaded: false,
-                error: false,
+                error: null,
                 products: []
             }
 
             const result = productReducer(state, action)
             const expectedState = {
                 loaded: true,
-                error: false,
+                error: null,
                 products: mockProductList
             }
             expect(result).toEqual(expectedState)
@@ -51,7 +54,7 @@ describe('Product Reducer', () => {
         it('should get product list', () => {
             const state = {
                 loaded: false,
-                error: false,
+                error: null,
                 products: mockProductList
             }
             const expectedState = mockProductList
@@ -63,11 +66,30 @@ describe('Product Reducer', () => {
         it('should get isProductsLoaded', () => {
             const state = {
                 loaded: true,
-                error: false,
+                error: null,
                 products: mockProductList
             }
             const expectedState = true
             expect(isProductsLoaded(state)).toEqual(expectedState)
+        })
+    })
+
+    describe('getProductsError', () => {
+        it('should get product error', () => {
+            const state = {
+                loaded: false,
+                error: {
+                    message: 'Internal Server Error',
+                    status: 500
+                },
+                products: []
+            }
+            const expectedState = {
+                message: 'Internal Server Error',
+                status: 500
+            };
+
+            expect(getProductsError(state)).toEqual(expectedState)
         })
     })
 })

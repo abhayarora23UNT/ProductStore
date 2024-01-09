@@ -1,10 +1,15 @@
 <router-outlet></router-outlet>
 
-<ng-container *ngIf="productList$">
+<ng-container
+  *ngIf="loadProductError$ | async as errorObject; else productList ">
+  {{errorObject.message}}
+</ng-container>
+
+<ng-template #productList>
   <section class="results">
     <app-product-item
       *ngFor="let item of productList$ | async"
       [productItem]="item">
     </app-product-item>
   </section>
-</ng-container>
+</ng-template>

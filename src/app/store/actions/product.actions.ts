@@ -7,7 +7,7 @@ export enum ProductActionTypes {
     clearProducts = '[Product] Clear All Producs',
     loadProducts = '[Product] Load All Products',
     setProducts = '[Product] Set Products',
-    setProductsError = '[Product] Error',
+    setProductsError = '[Product] Load Products Error',
 }
 
 export const loadProducts = createAction(ProductActionTypes.loadProducts);
