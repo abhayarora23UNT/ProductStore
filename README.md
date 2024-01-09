@@ -2,6 +2,10 @@
 ###  Product Store App
 
 This application demonstrates different products, focussing on ngRx state managment and 100% code coverage using jest and cypress tests.
+Application uses the open-source product api to retrieved and show the contents on UI.
+
+This application can be used a base to implement NgRx StateManagement in Complex Projects
+
 
 
 
